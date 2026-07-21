@@ -159,9 +159,15 @@ let users = [
   {id : 2 , name : 'Ankita' , age : 26}
 ]
 
-app.get('/users',(req,res)=>{
-  const id = req.params.id;
+app.get('/users/:id',(req,res)=>{
+ console.log("GET API HIT");
+  if(req.params.id== "NULL" && req.body.age ==  "NULL" && req.body.name == "NULL"){
+    res.json({message : "invalid data"})
+  }
+
+  const id = parseInt(req.params.id);
   const user = users.find(u => u.id === id);
+
   res.json(user);
 })
 

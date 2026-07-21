@@ -2,10 +2,10 @@
   "name": "my-api",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "Q1-API.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node Q1-API.js"
   },
   "repository": {
     "type": "git",
